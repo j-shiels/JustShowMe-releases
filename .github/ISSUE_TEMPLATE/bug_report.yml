@@ -1,0 +1,68 @@
+name: Bug report
+description: Something in JustShowMe Desktop is broken or not working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report.
+
+        ⚠️ **Before you attach anything:** JustShowMe captures screen recordings, screenshots,
+        and webpage annotations. Screenshots and logs can contain personal or sensitive
+        information (your screen contents, file names, account details). **Please redact
+        anything private before attaching it** — issues here are public and attachments
+        can't be fully un-shared once posted.
+
+        🔒 Have an **account, billing, privacy, or security** issue instead? Don't post it
+        here — see the contact links on the "New issue" page.
+  - type: input
+    id: version
+    attributes:
+      label: JustShowMe version
+      description: Find this in the app's About / Settings screen.
+      placeholder: e.g. 1.4.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Other (specify in description)
+    validations:
+      required: true
+  - type: input
+    id: install-source
+    attributes:
+      label: How did you install it?
+      placeholder: e.g. Microsoft Store, direct download from releases
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we trigger the bug?
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or logs (optional)
+      description: Remember to redact anything private before attaching.
+    validations:
+      required: false
